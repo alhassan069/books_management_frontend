@@ -24,7 +24,7 @@ export const FilesUploadComponent = () => {
       .get(url)
       .then((res) => setUnprocessedFiles(res.data.files))
       .catch((err) => console.log(err));
-  }, []);
+  }, [backendurl]);
 
   const handleFileChange = (event) => {
     if (event.target.files) {
@@ -75,7 +75,7 @@ export const FilesUploadComponent = () => {
     axios
       .post(url, formData, config)
       .then((response) => {
-        if (response.status == 201) {
+        if (response.status === 201) {
           handleAlert("success");
           setTemplate("");
         }
@@ -97,7 +97,7 @@ export const FilesUploadComponent = () => {
     axios
       .post(url, formData, config)
       .then((response) => {
-        if (response.status == 201) {
+        if (response.status === 201) {
           handleAlert("success1");
           setTemplate("");
         }

@@ -29,11 +29,11 @@ const ViewData = () => {
     setInput(event.target.value);
   };
   const handleSearch = () => {
-    if (search == "isbn") {
+    if (search === "isbn") {
       searchIsbn();
       console.log("isbn search");
       console.log(input);
-    } else if (search == "email") {
+    } else if (search === "email") {
       searchEmail();
       console.log("email search");
       console.log(input);
@@ -47,7 +47,7 @@ const ViewData = () => {
     axios
       .get(url)
       .then((response) => {
-        if (response.status == 201) {
+        if (response.status === 201) {
           console.log(response.data.data);
           setData(response.data.data);
         }
@@ -62,7 +62,7 @@ const ViewData = () => {
     axios
       .get(url)
       .then((response) => {
-        if (response.status == 201) {
+        if (response.status === 201) {
           console.log(response.data.data);
           setData(response.data.data);
         }
@@ -75,7 +75,7 @@ const ViewData = () => {
     axios
       .get(url)
       .then((response) => {
-        if (response.status == 201) {
+        if (response.status === 201) {
           console.log(response.data.data);
           setData(response.data.data);
         }
@@ -88,7 +88,7 @@ const ViewData = () => {
     axios
       .get(url)
       .then((response) => {
-        if (response.status == 201) {
+        if (response.status === 201) {
           console.log(response.data.data);
           setData(response.data.data);
         }

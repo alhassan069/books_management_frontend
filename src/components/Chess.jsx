@@ -36,7 +36,7 @@ const Chess = () => {
       if (tempMatrix[iM][jM] === 3) {
         for (let i = 0; i < m; i++) {
           for (let j = 0; j < m; j++) {
-            if (i === iM && j == jM) {
+            if (i === iM && j === jM) {
               tempMatrix[i][j] = 2;
             } else {
               tempMatrix[i][j] = 1;
@@ -90,7 +90,7 @@ const Chess = () => {
                             width: "50px",
                             border: "1px solid black",
                           }}
-                          className={(i + j) % 2 == 0 ? "whitebg" : "blackbg"}
+                          className={(i + j) % 2 === 0 ? "whitebg" : "blackbg"}
                           key={i + j}
                           onClick={() => handleClick(i, j)}
                         >
@@ -98,6 +98,7 @@ const Chess = () => {
                             <img
                               src="./portablejim-Chess-tile-Knight-2.png"
                               style={{ height: "25px", margin: "7px" }}
+                              alt="KNIGHT"
                             />
                           )}
                           {matrix[i][j] === 3 && (
